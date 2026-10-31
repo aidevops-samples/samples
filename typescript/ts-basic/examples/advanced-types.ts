@@ -34,7 +34,7 @@ console.log('tag:', tag);
 type Params = RouteParams<'/users/:userId/posts/:postId'>;   // 'userId' | 'postId'
 const params: Record<Params, number> = { userId: 7, postId: 42 };
 console.log('path:', buildPath('/users/:userId/posts/:postId', params));
-// buildPath('/users/:userId', {});              // TS2345 — userId가 빠짐
+// buildPath('/users/:userId', {});              // TS2741 — userId가 빠짐
 // buildPath('/users/:userId', { id: 1 });       // TS2353 — id가 아니라 userId
 
 // 6) 타입이 붙은 이벤트 — 이벤트 이름마다 인자 타입이 다르다

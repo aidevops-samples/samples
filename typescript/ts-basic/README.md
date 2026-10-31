@@ -1,7 +1,7 @@
 # TypeScript — 가이드 예제
 
 [aidevops.kr TypeScript 가이드](https://aidevops.kr/learn/typescript/)의 코드를 섹션별로 옮기고 테스트를 붙인 프로젝트입니다.
-Node.js 24 LTS, TypeScript 5.9 기준입니다.
+Node.js 24 LTS, TypeScript 7.0(Go로 다시 작성한 네이티브 컴파일러) 기준입니다.
 
 Node.js 24는 `.ts` 파일의 타입 표기를 지우고 바로 실행합니다(type stripping). 그래서 이 프로젝트는 빌드 단계가 없고 `ts-node`도 쓰지 않습니다. 타입 검사는 `tsc`가 따로 맡습니다.
 
@@ -65,4 +65,5 @@ node examples/narrowing.ts   # 하나씩 실행
 | `"erasableSyntaxOnly"` | 타입 제거만으로 실행할 수 없는 문법(`enum`, `namespace`, 생성자 매개변수 프로퍼티)을 막습니다 |
 | `"verbatimModuleSyntax"` | 타입만 가져올 때 `import type`을 쓰게 해서, 실행 시 지워질 import를 분명히 합니다 |
 | `"noUncheckedIndexedAccess"` | `arr[0]`, `record[key]`의 타입에 `undefined`를 포함시켜 빠진 값을 놓치지 않게 합니다 |
+| `"exactOptionalPropertyTypes"` | `a?: number`에 `undefined`를 직접 넣는 것을 막아, "키가 없음"과 "값이 undefined"를 구분합니다. TypeScript 7의 `tsc --init`도 켜는 값입니다 |
 | `"noImplicitOverride"` | 부모 메서드를 덮어쓸 때 `override`를 쓰게 해서, 부모 쪽 이름이 바뀌면 오류로 알려 줍니다 |
