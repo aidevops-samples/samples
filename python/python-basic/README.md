@@ -48,6 +48,6 @@ pytest
 
 - `src/app/weather.py`: 가이드의 테스트 예제가 사용하는 `WeatherClient`를 구현했습니다. 네트워크 호출을 `_get` 한 곳에 모아 테스트에서 바꿔 끼울 수 있게 했습니다.
 - `pyproject.toml`: `src/app`을 패키지로 설치하도록 `[build-system]`을, 테스트가 `app`을 찾도록 `[tool.pytest.ini_options]`를 추가했습니다.
-- `examples/concurrency_demo.py`: `ProcessPoolExecutor`를 `if __name__ == "__main__":` 아래로 옮겼습니다. Windows와 macOS는 자식 프로세스가 파일을 다시 import하므로 이 가드가 없으면 오류가 납니다.
+- `examples/concurrency_demo.py`: 가이드와 같은 코드입니다. `ProcessPoolExecutor`를 쓰는 코드는 `if __name__ == "__main__":` 아래에 있어야 Windows·macOS에서 동작합니다.
 - `examples/context_managers.py`, `examples/files.py`, `examples/report.py`: 실행 위치와 상관없이 동작하도록 파일 경로를 정리했습니다.
 - `examples/decorators.py`: 실행했을 때 결과를 볼 수 있도록 호출 코드를 추가했습니다.
