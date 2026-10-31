@@ -1,0 +1,20 @@
+{
+  "name": "ts-basic",
+  "version": "1.0.0",
+  "description": "aidevops.kr TypeScript 가이드 예제",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc",
+    "examples": "node scripts/run-examples.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -7,6 +7,7 @@
 |---|---|---|---|
 | Node.js | [`nodejs/todo-api`](nodejs/todo-api) | [Node.js 가이드](https://aidevops.kr/learn/nodejs/) | Node.js 24 LTS |
 | Python | [`python/python-basic`](python/python-basic) | [Python 기본 가이드](https://aidevops.kr/learn/python/) | Python 3.12 이상 |
+| TypeScript | [`typescript/ts-basic`](typescript/ts-basic) | [TypeScript 가이드](https://aidevops.kr/learn/typescript/) | Node.js 24 LTS |
 
 가이드가 추가되는 대로 같은 구조로 늘려 갑니다.
 
@@ -27,6 +28,12 @@ cd python/python-basic
 uv sync
 uv run pytest
 uv run python -m app.cli
+
+# TypeScript
+cd typescript/ts-basic
+npm ci
+npm test
+node examples/narrowing.ts
 ```
 
 각 디렉터리의 README에 가이드 섹션과 파일의 대응표가 있습니다.

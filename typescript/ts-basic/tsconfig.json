@@ -1,0 +1,23 @@
+{
+  // 가이드 "프로젝트 설정" 섹션의 핵심 값 + Node.js 24로 .ts를 바로 실행하기 위한 값
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+
+    // Node.js가 직접 실행하므로 Node 규칙으로 모듈을 찾습니다.
+    // Vite·esbuild로 번들링하는 프로젝트라면 "module": "preserve", "moduleResolution": "bundler"를 씁니다.
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    // tsc는 타입 검사만 하고, 실행은 Node.js의 타입 제거(type stripping)가 맡습니다.
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src", "examples", "test", "scripts"]
+}
