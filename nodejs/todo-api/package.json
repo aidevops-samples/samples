@@ -1,0 +1,18 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "aidevops.kr Node.js 가이드의 Todo API 예제",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.2.0",
+    "zod": "^4.0.0"
+  }
+}

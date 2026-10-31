@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+*.log
+access.log.gz
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+dist/
+build/
+
+# 예제 실행 중에 생기는 파일
+examples/data/
+
+# 환경 변수
+.env
+.env.*
+!.env.example
+
+# 편집기 · OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

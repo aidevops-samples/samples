@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  nodejs-todo-api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nodejs/todo-api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: nodejs/todo-api/.nvmrc
+          cache: npm
+          cache-dependency-path: nodejs/todo-api/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - name: Docker 이미지 빌드
+        run: docker build -t todo-api:ci .
+
+  python-basic:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: python/python-basic
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: uv sync
+      - run: uv run pytest
+      - name: 예제 실행
+        run: |
+          for f in examples/*.py; do
+            echo "== $f"
+            uv run python "$f"
+          done
