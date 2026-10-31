@@ -1,4 +1,4 @@
-// 가이드 "프로젝트 설정" — Node.js 24는 .ts 파일을 그대로 실행합니다.
+// 가이드 "프로젝트 설정과 실행" — Node.js 24는 .ts 파일을 그대로 실행합니다.
 //   node examples/setup.ts      실행 (타입은 지우기만 하고 검사하지 않음)
 //   npx tsc                     타입 검사 (tsconfig.json의 strict 설정 적용)
 

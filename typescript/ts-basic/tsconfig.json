@@ -1,5 +1,5 @@
 {
-  // 가이드 "프로젝트 설정" 섹션의 핵심 값 + Node.js 24로 .ts를 바로 실행하기 위한 값
+  // 가이드 "프로젝트 설정과 실행" 섹션의 tsconfig — 핵심 값 + Node.js 24로 .ts를 바로 실행하기 위한 값
   "compilerOptions": {
     "strict": true,
     "target": "ES2022",
