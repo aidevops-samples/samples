@@ -13,8 +13,8 @@
 ## 빠르게 실행하기
 
 ```bash
-git clone https://github.com/<owner>/aidevops-samples.git
-cd aidevops-samples
+git clone https://github.com/aidevops-samples/samples.git
+cd samples
 
 # Node.js
 cd nodejs/todo-api
